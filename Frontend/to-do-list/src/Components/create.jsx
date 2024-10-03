@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import './create.css'
+import { IoIosAddCircle } from "react-icons/io";
 
 
 const create = () => {
@@ -16,6 +17,9 @@ const create = () => {
       <h1>ADD TASK</h1>
         <input type="text" placeholder='Enter Task' onChange={(e)=> setTask(e.target.value)}/>
         <button onClick={taskAdded}>Add Task</button>
+        <IoIosAddCircle className='iconn'/>
+
+        
     </div>
     </>
   )

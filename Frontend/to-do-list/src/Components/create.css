@@ -8,8 +8,8 @@
     justify-content: center;
     gap: 15px;
     padding: 20px;
-    /* background-color: #66B032; */
-    background-image: url(https://images.pexels.com/photos/122429/leaf-nature-green-spring-122429.jpeg?cs=srgb&dl=pexels-pixabay-122429.jpg&fm=jpg);
+    background-color: #66B032;
+    /* background-image: url(https://images.pexels.com/photos/122429/leaf-nature-green-spring-122429.jpeg?cs=srgb&dl=pexels-pixabay-122429.jpg&fm=jpg); */
     border-radius: 20px;
     background-repeat: none;
     background-size: cover;
@@ -19,6 +19,12 @@
     margin-top: 50px;
 
     box-shadow: 5px 10px 18px #888888;
+}
+.iconn{
+    font-size: 40px;
+    color: #01210b;
+    float: right;
+    
 }
 
 /* Responsive Design for screens larger than 768px (tablets and above) */
@@ -41,7 +47,7 @@
 /* Responsive Design for screens smaller than 480px (mobile phones) */
 @media (max-width: 480px) {
     .addtask {
-        width: 95%;
+        width: 85%;
         padding: 15px;
         
     }

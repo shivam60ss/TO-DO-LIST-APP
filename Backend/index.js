@@ -8,20 +8,27 @@ mongoose.connect('mongodb://localhost:27017/demo')
 app.use(express.json())
 
 app.use(cors());
+
 app.post('/add', (req, res) => {
     const task = req.body.task;
     TodoModel.create({
-        task:task,
+        task: task,
     })
-    .then(result => res.json(result))
-    .catch(err => res.json(err))
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
 
 })
 
-app.get('/get',(req,res)=>{
+app.get('/get', (req, res) => {
     TodoModel.find()
-    .then(result => res.json(result))
-    .catch(err => console.log(err))
+        .then(result => res.json(result))
+        .catch(err => console.log(err))
+});
+
+app.put('/update:id', (req, res) => {
+    const id = req.params.id;
+    TodoModel.findByIdAndUpdate({ _id: id }, { done: true }).then(result => res.json(result)).
+        catch(err => res.json(err))
 })
 
 app.listen(3000, () => {
